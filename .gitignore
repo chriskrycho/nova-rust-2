@@ -8,3 +8,5 @@ Rust.novaextension/Syntaxes/libtree-sitter-rust.dylib
 tree-sitter/build
 
 coverage
+.codanna/index
+.fastembed_cache
