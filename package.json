@@ -2,7 +2,13 @@
   "name": "nova-rust",
   "version": "2.4.0",
   "private": true,
-  "author": "Drew Kilb",
+  "authors": [
+    "Drew Kilb",
+    {
+      "name": "Chris Krycho",
+      "email": "hello@chriskrycho.com"
+    }
+  ],
   "scripts": {
     "build": "tsc",
     "test": "jest --verbose --coverage"
