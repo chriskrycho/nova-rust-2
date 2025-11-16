@@ -1,3 +1,36 @@
 [tools]
 node = "22.17.1"
 pnpm = "10.15.0"
+
+[tasks.setup-rust-analyzer]
+description = "Get the latest version of rust-analyzer for development."
+run = "./Rust.novaextension/bin/update_server.sh"
+
+[tasks.setup-ts]
+description = "Install TypeScript dependencies"
+run = "pnpm install"
+
+[tasks.build-ts]
+description = "Build TypeScript source"
+depends = ["setup-ts"]
+run = "pnpm run build"
+
+[tasks.setup-syntax]
+description = "Initialize tree-sitter-rust submodule"
+run = "git submodule update --init --recursive"
+
+[tasks.build-syntax]
+description = "Build tree-sitter syntax highlighting"
+depends = ["setup-syntax"]
+run = '''
+./tree-sitter/compile_parser.sh "$(pwd)/tree-sitter/tree-sitter-rust" /Applications/Nova.app
+mv ./tree-sitter/libtree-sitter-rust.dylib ./Rust.novaextension/Syntaxes/libtree-sitter-rust.dylib
+'''
+
+[tasks.setup]
+description = "Set up all dependencies"
+depends = ["setup-*"]
+
+[tasks.build]
+description = "Build everything (TypeScript + syntax highlighting)"
+depends = ["build-*"]

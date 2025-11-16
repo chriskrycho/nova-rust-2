@@ -1,15 +1,28 @@
 # How to build the app
 
+> [!IMPORTANT]
+> This project uses [mise](https://mise.jdx.dev) for all actual development. It is not a _requirement_, and you can do everything it does manually, but it will make your life much easier.
+
 ## Requirements
 
 - The Nova app, of course.
-- [Node](https://nodejs.org/) and [the **pnpm** package manager](https://pnpm.io): to build the TypeScript source for this extension.
-- **XCode**: to build the Tree Sitter library (Command Line Tools from Apple may suffice)
+- [Node.js](https://nodejs.org/) and [the **pnpm** package manager](https://pnpm.io): to build the TypeScript source for this extension.
+- **Xcode**: to build the Tree Sitter library (Command Line Tools from Apple may suffice)
+
+If you use Mise, all you need to do to do _all_ build and setup is:
+
+```shell
+mise build
+```
+
+This will automatically download and install all required dependencies other than Nova and Xcode’s Command Line tools, and then build all of them. There are dedicated `mise` tool commands for each setup and build step; the output from `mise build` will show you all of them.
+
+## Manually Setting Up the Dev Environment
 
 > [!NOTE]
-> You can use [mise](https://mise.jdx.dev) to manage _many_ development environments, and if you have it set up on your machine, you will get the same versions of Node and pnpm as this project uses automatically.
+> Each of these steps also has a corresponding `mise` tool command.
 
-## Setting Up the Dev Environment
+### Setup
 
 First, install the Node dependencies for the extension:
 
