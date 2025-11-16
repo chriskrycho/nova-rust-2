@@ -35,9 +35,17 @@ if [[ $download = true ]]; then
     curl -L --fail --silent --show-error \
         https://github.com/rust-lang/rust-analyzer/releases/latest/download/$binary \
         | gunzip -c - > ./rust-analyzer-new
-    chmod +x ./rust-analyzer-new
-    if [[ ! -f "./rust-analyzer" ]]; then
+
+    # Verify the download succeeded
+    if [[ ! -f "./rust-analyzer-new" ]] || [[ ! -s "./rust-analyzer-new" ]]; then
+        echo "Error: Failed to download rust-analyzer binary"
+        exit 1
+    fi
+
+    if [[ -f "./rust-analyzer" ]]; then
+        echo "archiving old binary..."
         mv ./rust-analyzer ./rust-analyzer-old
     fi
     mv ./rust-analyzer-new ./rust-analyzer
+    chmod +x ./rust-analyzer
 fi
