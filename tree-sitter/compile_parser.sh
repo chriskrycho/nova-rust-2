@@ -12,7 +12,7 @@ WORKINGDIR=$(cd "$(dirname "$0")"; pwd -P)
 # - Build both arm64 (Apple Silicon) and x86_64 (Intel)
 # - Require a minimum of macOS 11.0
 # - Include the /src/ directory for headers (for `tree_sitter/parser.h`)
-BUILD_FLAGS="-arch arm64 -arch x86_64 -mmacosx-version-min=11.0 -I${PARSER_SRC}/src/"
+BUILD_FLAGS="-arch arm64 -arch x86_64 -mmacosx-version-min=13.0 -I${PARSER_SRC}/src/"
 
 # Build in a temporary `build/` directory.
 TMP_BUILD_DIR=$WORKINGDIR/build
