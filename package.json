@@ -14,7 +14,7 @@
     "test": "vitest run --coverage"
   },
   "devDependencies": {
-    "@types/nova-editor-node": "^5.1.5",
+    "@types/nova-editor": "^1.0.3",
     "@vitest/coverage-v8": "4.0.9",
     "prettier": "^3.6.2",
     "typescript": "^5.9.3",
