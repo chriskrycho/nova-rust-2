@@ -10,3 +10,8 @@ tree-sitter/build
 coverage
 .codanna/index
 .fastembed_cache
+
+
+# Tree-sitter build output
+*.dylib
+
