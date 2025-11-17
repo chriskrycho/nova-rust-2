@@ -1,12 +1,12 @@
 {
-  "identifier": "com.chriskrycho.rust",
+  "identifier": "chriskrycho.rust",
   "name": "Rust 2",
   "organization": "Chris Krycho",
   "description": "Rust language support for Nova featuring Rust Analyzer, syntax definitions, and format on save.",
   "repository": "https://github.com/chriskrycho/nova-rust-2",
   "bugs": "https://github.com/chriskrycho/nova-rust-2/issues",
   "license": "MIT",
-  "version": "2.4.0",
+  "version": "3.0.0",
   "categories": ["languages", "formatters"],
   "min_runtime": "13.0",
 

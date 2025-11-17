@@ -25,7 +25,14 @@ run = "git submodule update --init --recursive"
 description = "Build tree-sitter syntax highlighting"
 depends = ["setup-syntax"]
 run = '''
+echo "compiling syntax"
 ./tree-sitter/compile_parser.sh "$(pwd)/tree-sitter/tree-sitter-rust" /Applications/Nova.app
+
+echo "signing syntax"
+# `--sign -` performs "ad hoc code signing".
+codesign --sign - ./tree-sitter/libtree-sitter-rust.dylib
+
+echo "relocating compiled syntax"
 mv ./tree-sitter/libtree-sitter-rust.dylib ./Rust.novaextension/Syntaxes/libtree-sitter-rust.dylib
 '''
 

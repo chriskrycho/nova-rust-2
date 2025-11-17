@@ -1,3 +1,19 @@
+## Version 3.0.0
+
+### New
+
+This is a new version of the package with a new maintainer, [Chris Krycho][ck]. That’s the only meaningful “new” bit here; perhaps there will be more later.
+
+[ck]: https://www.chriskrycho.com
+
+### Fixed
+
+The extension now works correctly with the latest versions of `rust-analyzer` and Nova, and in particular code completion items no longer add a bunch of incorrect characters.
+
+### Under the hood
+
+The project got a fair bit of basic maintenance to update dependencies and the like, but you probably won’t notice that. They’ll make it easier for me to have a chance at maintaining it and keeping it up to date, though!
+
 ## Version 2.4.0
 
 ### New

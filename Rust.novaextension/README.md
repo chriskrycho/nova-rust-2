@@ -25,12 +25,10 @@ Syntax highlighting, completion assistance from Rust Analyzer, and error checkin
 ### Hover Info
 
 View descriptions or type info by hovering your mouse cursor over identifiers.
-![Hovering over symbols or keywords displays a box with more information about the item.](https://github.com.chriskrycho/nova-rust/blob/main/img/hover.gif?raw=true)
 
 ### Jump to Definition
 
 Right click an identifier and select **Jump to Definition** from the menu to be taken to the file location where the selected symbol is defined.
-![Selecting 'Jump to Definition' from the right-click menu to navigate to the definition of the symbol.](https://github.com.chriskrycho/nova-rust/blob/main/img/jump_to_def.gif?raw=true)
 
 ### Rename Symbol
 
