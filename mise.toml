@@ -1,3 +1,5 @@
+#:schema https://mise.jdx.dev/schema/mise.json
+
 [tools]
 node = "22.17.1"
 pnpm = "10.15.0"
@@ -34,3 +36,8 @@ depends = ["setup-*"]
 [tasks.build]
 description = "Build everything (TypeScript + syntax highlighting)"
 depends = ["build-*"]
+
+[tasks.open]
+description = "Install the extension in Nova"
+depends = ["build"]
+run = "open -a Nova Rust.novaextension --args extension activate"
