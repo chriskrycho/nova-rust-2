@@ -4,13 +4,13 @@ export class RustFormatter {
 
   constructor() {
     nova.config.observe(
-      'com.chriskrycho.rust.rustfmt-on-save',
+      'chriskrycho.rust.rustfmt-on-save',
       (enabled: boolean) => {
         this.enabled = enabled;
       },
     );
     nova.config.observe(
-      'com.chriskrycho.rust.rustfmt-nightly',
+      'chriskrycho.rust.rustfmt-nightly',
       (useNightly: boolean) => {
         this.nightly = useNightly;
       },

@@ -39,14 +39,14 @@ export async function activate() {
       }
     }
   });
-  nova.commands.register('com.chriskrycho.rust.rename', (editor: TextEditor) =>
+  nova.commands.register('chriskrycho.rust.rename', (editor: TextEditor) =>
     rename(editor, langServer),
   );
-  nova.commands.register('com.chriskrycho.rust.restart', () =>
+  nova.commands.register('chriskrycho.rust.restart', () =>
     langServer?.restart(),
   );
   nova.assistants.registerTaskAssistant(cargoTasks, {
-    identifier: 'com.chriskrycho.rust.assistants.cargo',
+    identifier: 'chriskrycho.rust.assistants.cargo',
     name: 'Cargo',
   });
   nova.fs.watch('**/Cargo.toml', () => langServer?.restart());

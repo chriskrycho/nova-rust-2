@@ -122,10 +122,10 @@ TypeScript compiles from `src/**/*.ts` to `Rust.novaextension/Scripts/` (defined
 
 Key preference namespaces (defined in `extension.json`):
 
-- `com.chriskrycho.rust.rustfmt-on-save`: Enable format on save
-- `com.chriskrycho.rust.rustfmt-nightly`: Use nightly rustfmt
-- `com.chriskrycho.rust.lint-command`: Choose `check` or `clippy`
-- `com.chriskrycho.rust.lint-args`: Additional cargo arguments
-- `com.chriskrycho.rust.env-vars`: Array of environment variables
-- `com.chriskrycho.rust.cargo.build.*`: Build task configuration
-- `com.chriskrycho.rust.cargo.run.*`: Run task configuration
+- `chriskrycho.rust.rustfmt-on-save`: Enable format on save
+- `chriskrycho.rust.rustfmt-nightly`: Use nightly rustfmt
+- `chriskrycho.rust.lint-command`: Choose `check` or `clippy`
+- `chriskrycho.rust.lint-args`: Additional cargo arguments
+- `chriskrycho.rust.env-vars`: Array of environment variables
+- `chriskrycho.rust.cargo.build.*`: Build task configuration
+- `chriskrycho.rust.cargo.run.*`: Run task configuration

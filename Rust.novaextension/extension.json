@@ -27,19 +27,19 @@
     "editor": [
       {
         "title": "Rename Symbol",
-        "command": "com.chriskrycho.rust.rename",
+        "command": "chriskrycho.rust.rename",
         "when": "editorSyntax == 'rust'"
       },
       {
         "title": "Restart Rust Analyzer",
-        "command": "com.chriskrycho.rust.restart",
+        "command": "chriskrycho.rust.restart",
         "when": "editorSyntax == 'rust'"
       }
     ],
     "text": [
       {
         "title": "Rename Symbol",
-        "command": "com.chriskrycho.rust.rename",
+        "command": "chriskrycho.rust.rename",
         "shortcut": "f2",
         "when": "editorSyntax == 'rust'"
       }
@@ -52,14 +52,14 @@
       "type": "section",
       "children": [
         {
-          "key": "com.chriskrycho.rust.rustfmt-on-save",
+          "key": "chriskrycho.rust.rustfmt-on-save",
           "title": "Format on Save",
           "description": "If enabled, files are formatted with `rustfmt` after saving.",
           "type": "boolean",
           "default": false
         },
         {
-          "key": "com.chriskrycho.rust.rustfmt-nightly",
+          "key": "chriskrycho.rust.rustfmt-nightly",
           "title": "Use Rstfmt Nightly",
           "description": "If Format on Save is enabled, this uses the latest and greatest Rustfmt features. You must have the nightly toolchain installed (i.e., have run `rustup component add rustfmt --toolchain nightly`).",
           "type": "boolean",
@@ -73,7 +73,7 @@
       "type": "section",
       "children": [
         {
-          "key": "com.chriskrycho.rust.lint-command",
+          "key": "chriskrycho.rust.lint-command",
           "title": "(Cargo) Lint Command",
           "link": "https://github.com/rust-lang/rust-clippy#clippy",
           "type": "enum",
@@ -84,7 +84,7 @@
           "default": "check"
         },
         {
-          "key": "com.chriskrycho.rust.lint-args",
+          "key": "chriskrycho.rust.lint-args",
           "title": "Additional Arguments",
           "description": "Arguments to pass to the Cargo lint command you selected.",
           "type": "string"
@@ -96,7 +96,7 @@
       "type": "section",
       "children": [
         {
-          "key": "com.chriskrycho.rust.env-vars",
+          "key": "chriskrycho.rust.env-vars",
           "title": "Environment Variables",
           "description": "These values are passed to Rust Analyzer and tasks created with the Cargo template. Each entry should have the format VARIABLENAME=somevalue. Values here will apply to any Rust project, and are useful for global settings like RUST_BACKTRACE=1.",
           "type": "stringArray"
@@ -111,7 +111,7 @@
       "type": "section",
       "children": [
         {
-          "key": "com.chriskrycho.rust.lint-command",
+          "key": "chriskrycho.rust.lint-command",
           "title": "(Cargo) Lint Command",
           "link": "https://github.com/rust-lang/rust-clippy#clippy",
           "type": "enum",
@@ -123,7 +123,7 @@
           "default": null
         },
         {
-          "key": "com.chriskrycho.rust.lint-args",
+          "key": "chriskrycho.rust.lint-args",
           "title": "Additional Arguments",
           "description": "Arguments to pass to the Cargo lint command you selected.",
           "type": "string"
@@ -135,7 +135,7 @@
       "type": "section",
       "children": [
         {
-          "key": "com.chriskrycho.rust.env-vars",
+          "key": "chriskrycho.rust.env-vars",
           "title": "Environment Variables",
           "description": "These values are passed to Rust Analyzer and tasks created with the Cargo template. Each entry should have the format VARIABLENAME=somevalue. Values here will apply only to this project and can override global settings. A useful example is setting DATABASE_URL which is required by the sqlx::query macro.",
           "type": "stringArray"
@@ -149,10 +149,10 @@
       "description": "Easily set up common Cargo commands.",
       "tasks": {
         "build": {
-          "resolve": "com.chriskrycho.rust.assistants.cargo"
+          "resolve": "chriskrycho.rust.assistants.cargo"
         },
         "run": {
-          "resolve": "com.chriskrycho.rust.assistants.cargo"
+          "resolve": "chriskrycho.rust.assistants.cargo"
         },
         "clean": {
           "shell": true,
@@ -162,7 +162,7 @@
       },
       "config": [
         {
-          "key": "com.chriskrycho.rust.cargo.build.subcommand",
+          "key": "chriskrycho.rust.cargo.build.subcommand",
           "title": "Build Subcommand",
           "description": "The Cargo command to run for Build task.",
           "type": "enum",
@@ -171,13 +171,13 @@
           "radio": true
         },
         {
-          "key": "com.chriskrycho.rust.cargo.build.args",
+          "key": "chriskrycho.rust.cargo.build.args",
           "title": "Additional Arguments",
           "description": "Arguments to pass to the selected Cargo command for Build task.",
           "type": "string"
         },
         {
-          "key": "com.chriskrycho.rust.cargo.run.subcommand",
+          "key": "chriskrycho.rust.cargo.run.subcommand",
           "title": "Run Subcommand",
           "description": "The Cargo command to run for Run task.",
           "type": "enum",
@@ -186,7 +186,7 @@
           "radio": true
         },
         {
-          "key": "com.chriskrycho.rust.cargo.run.args",
+          "key": "chriskrycho.rust.cargo.run.args",
           "title": "Additional Arguments",
           "description": "Arguments to pass to the selected Cargo command for Run task.",
           "type": "string"

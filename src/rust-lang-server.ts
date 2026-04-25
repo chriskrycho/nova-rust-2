@@ -13,7 +13,7 @@ export class RustLanguageServer {
 
   constructor() {
     onPreferenceChange(
-      'com.chriskrycho.rust.lint-command',
+      'chriskrycho.rust.lint-command',
       false,
       (cargoCommand: string) => {
         this.lintCommand = cargoCommand;
@@ -21,7 +21,7 @@ export class RustLanguageServer {
       },
     );
     onPreferenceChange(
-      'com.chriskrycho.rust.lint-args',
+      'chriskrycho.rust.lint-args',
       false,
       (lintArgs: string | null) => {
         if (lintArgs) {
@@ -31,7 +31,7 @@ export class RustLanguageServer {
       },
     );
     onPreferenceChange(
-      'com.chriskrycho.rust.env-vars',
+      'chriskrycho.rust.env-vars',
       true,
       (varList: string[] | null) => {
         this.envVars = envVarObject(varList || []);

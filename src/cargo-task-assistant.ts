@@ -9,7 +9,7 @@ class CargoTaskAssistant {
 
   constructor() {
     onPreferenceChange(
-      'com.chriskrycho.rust.env-vars',
+      'chriskrycho.rust.env-vars',
       true,
       (varList: string[] | null) => {
         this.envVars = envVarObject(varList || []);
@@ -24,11 +24,11 @@ class CargoTaskAssistant {
 
   resolveTaskAction(context: TaskActionResolveContext<any>): TaskProcessAction {
     let args: string[] = [];
-    let cmdPref = 'com.chriskrycho.rust.cargo.build.subcommand';
-    let argPref = 'com.chriskrycho.rust.cargo.build.args';
+    let cmdPref = 'chriskrycho.rust.cargo.build.subcommand';
+    let argPref = 'chriskrycho.rust.cargo.build.args';
     if (context.action === Task.Run) {
-      cmdPref = 'com.chriskrycho.rust.cargo.run.subcommand';
-      argPref = 'com.chriskrycho.rust.cargo.run.args';
+      cmdPref = 'chriskrycho.rust.cargo.run.subcommand';
+      argPref = 'chriskrycho.rust.cargo.run.args';
     }
     args.push(context.config?.get(cmdPref) as string);
     let comArgs = context.config?.get(argPref);
