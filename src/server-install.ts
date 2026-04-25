@@ -93,12 +93,6 @@ export function getLatestBinary(): Promise<boolean> {
   });
 }
 
-export function replaceBinary() {
-  console.log('attempting to replace Rust Analyzer');
-  nova.fs.remove(`${binPath}/rust-analyzer`);
-  nova.fs.move(`${binPath}/rust-analyzer-new`, `${binPath}/rust-analyzer`);
-}
-
 interface GitHubReleaseData {
   draft: boolean;
   name: string;

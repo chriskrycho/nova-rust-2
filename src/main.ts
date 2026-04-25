@@ -4,7 +4,6 @@ import { RustLanguageServer } from './rust-lang-server';
 import {
   makeScriptsExecutable,
   getLatestBinary,
-  replaceBinary,
 } from './server-install';
 import { rename } from './rename';
 
@@ -28,13 +27,10 @@ export async function activate() {
     if (restart) {
       if (langServer?.client) {
         langServer.client.onDidStop(() => {
-          console.log('Moving binary and restarting.');
-          replaceBinary();
           langServer?.start();
         });
-        langServer?.stop();
+        langServer.stop();
       } else {
-        replaceBinary();
         langServer?.start();
       }
     }
