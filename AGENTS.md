@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to LLM-based agents when working with code in this repository.
 
 ## Project Overview
 
@@ -10,17 +10,6 @@ This is a Nova text editor extension that provides Rust language support for mac
 - **Tree-sitter** for syntax highlighting and symbol detection
 - **rustfmt** for code formatting
 - **Cargo** task integration
-
-## Code Intelligence with Codanna
-
-This repository includes `.claude/codanna.md` which provides instructions for using Codanna's semantic search and code intelligence features. **When exploring unfamiliar parts of the codebase or trying to understand how specific features work**, refer to that file for:
-
-- Semantic search to find relevant code by concept (not just text matching)
-- Symbol exploration with `symbol_id` references
-- Call graph analysis to understand code relationships
-- Token-efficient strategies for reading only relevant code sections
-
-Use Codanna when you need to understand how functionality is implemented across multiple files, especially for complex features like LSP integration, preference handling, or formatter logic.
 
 ## Common Commands
 
