@@ -32,6 +32,8 @@ if [[ $download = true ]]; then
     if [[ "$(uname -p)" = "x86_64" ]]; then
         binary="rust-analyzer-x86_64-apple-darwin.gz"
     fi
+    # We intentionally *don't* download or rename to "rust-analzyer" (sans "-new") in this script
+    # Once this script exits, the plugin will stop, rename & restart
     curl -L --fail --silent --show-error \
         https://github.com/rust-lang/rust-analyzer/releases/latest/download/$binary \
         | gunzip -c - > ./rust-analyzer-new
@@ -44,8 +46,7 @@ if [[ $download = true ]]; then
 
     if [[ -f "./rust-analyzer" ]]; then
         echo "archiving old binary..."
-        mv ./rust-analyzer ./rust-analyzer-old
+        cp ./rust-analyzer ./rust-analyzer-old
     fi
-    mv ./rust-analyzer-new ./rust-analyzer
-    chmod +x ./rust-analyzer
+    chmod +x ./rust-analyzer-new
 fi
